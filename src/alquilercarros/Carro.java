@@ -9,7 +9,7 @@ package alquilercarros;
  * @author lumen
  */
 public class Carro {
-    
+
     private String placa;
     private String marca;
     private String modelo;
@@ -49,7 +49,6 @@ public class Carro {
     public int getEdad() {
         return edad;
     }
-    
 
     public void setPlaca(String placa) {
         this.placa = placa;
@@ -74,8 +73,27 @@ public class Carro {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    public void alquilar() {
+        if (disponible) {
+            disponible = false;
+            System.out.println("El Vehiculo " + modelo + " ha sido alquilado correctamente");
+
+        } else {
+            System.out.println("El Vehiculo " + modelo + " no se encuentra disponible ");
+        }
+    }
+    
+    public void devolver(){
+        disponible = true;
+        System.out.println("El Vehiculo " + modelo + "Ha sido desocupado,Ya se encuntra disponible para alquilar");
+    }
+
+    @Override
+    public String toString() {
+        return "El Vehiculo" + "\nplaca: " + placa + " \nmarca: " + marca + " \nmodelo: " + modelo + " \nprecio: " + precio + " \ndisponible: " + disponible + " \nedad: " + edad + '}';
+    }
     
     
-    
-    
+
 }
