@@ -25,7 +25,7 @@ public class AlquilerCarros {
         Carro carro4 = new Carro("HND5678", "HONDA", "CIVIC", 50.0, true, 18);
         Carro carro5 = new Carro("HND1277", "FORD", "F-150", 85.0, true, 21);
         boolean acc = true;
-
+        System.out.println("RENTACAR LM");
         System.out.println("REGISTRO CLIENTE");
         System.out.print("Nombre: ");
         String nombre = sc.nextLine();
@@ -41,7 +41,7 @@ public class AlquilerCarros {
         Cliente cliente = new Cliente(nombre, apellido, celula, edad, dinero);
 
         while (acc) {
-            System.out.println("\n RENTACAR LM ");
+            System.out.println("\nRENTACAR LM ");
             System.out.println("1. ver catalogo de autos");
             System.out.println("2. Alquilar un vehiculo");
             System.out.println("3. devolver vehiculo");
@@ -68,7 +68,7 @@ public class AlquilerCarros {
                     System.out.println("4.- " + carro4);
                     System.out.println("5.- " + carro5);
 
-                    System.out.println("\n Seleccione el vehiculo a alquilar: ");
+                    System.out.println("\nSeleccione el vehiculo a alquilar: ");
                     int op = sc.nextInt();
                     Carro vehiculoSelec = null;
 
@@ -102,8 +102,17 @@ public class AlquilerCarros {
                     if (cliente.VehiculoAlquilado() != null) {
                         System.out.println("Vehiculo Alquilado");
                         System.out.println(cliente.VehiculoAlquilado());
-                        cliente.devVehiculo();
+                        System.out.println("Desea devolver este vehiculo[1.Si/2.No]");
+                        int devolop = sc.nextInt();
+                        if (devolop == 1) {
+                            cliente.devVehiculo();
+                            System.out.println("El vehiculo ha sido devuelto correctamente");
+                            
+                        }else{
+                            System.out.println("No posee vehiculos alquilados");
+                        }
                     }
+                    break;
                 case 4:
                     acc = false;
                     System.out.println("Gracias por usa nuestro servicio");
