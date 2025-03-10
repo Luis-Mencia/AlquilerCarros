@@ -55,6 +55,9 @@ public class Cliente {
             System.out.println("No posee vehiculos alquilados");
         }
     }
+    public Carro VehiculoAlquilado() {
+        return VehiculoAlquilado;
+    }
     
     
     

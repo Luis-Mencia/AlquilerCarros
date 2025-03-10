@@ -46,6 +46,7 @@ public class AlquilerCarros {
             System.out.println("2. Alquilar un vehiculo");
             System.out.println("3. devolver vehiculo");
             System.out.println("4. salir");
+            System.out.print("Opcion: ");
             int opcion = sc.nextInt();
 
             switch (opcion) {
@@ -60,7 +61,13 @@ public class AlquilerCarros {
                     break;
 
                 case 2:
-                    
+                    System.out.println("CATALOGO DE VEHICULOS DISPONIBLES");
+                    System.out.println("1.- " + carro1);
+                    System.out.println("2.- " + carro2);
+                    System.out.println("3.- " + carro3);
+                    System.out.println("4.- " + carro4);
+                    System.out.println("5.- " + carro5);
+
                     System.out.println("\n Seleccione el vehiculo a alquilar: ");
                     int op = sc.nextInt();
                     Carro vehiculoSelec = null;
@@ -92,14 +99,15 @@ public class AlquilerCarros {
                     break;
 
                 case 3:
-                    
-                    cliente.devVehiculo();
-                    break;
-                    
+                    if (cliente.VehiculoAlquilado() != null) {
+                        System.out.println("Vehiculo Alquilado");
+                        System.out.println(cliente.VehiculoAlquilado());
+                        cliente.devVehiculo();
+                    }
                 case 4:
                     acc = false;
                     System.out.println("Gracias por usa nuestro servicio");
-                    
+
                 default:
                     System.out.println("Ingrese una opcion valida");
 
