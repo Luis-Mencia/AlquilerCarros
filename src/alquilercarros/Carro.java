@@ -91,7 +91,14 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "El Vehiculo" + "\nplaca: " + placa + " \nmarca: " + marca + " \nmodelo: " + modelo + " \nprecio: " + precio + " \ndisponible: " + disponible + " \nedad: " + edad + '}';
+        return "--- Detalles Del Vehiculo---\n" +
+                "Placa " + placa + "\n"+
+                "Marca: " + marca + "\n"+
+                "Modelo: " + modelo + "\n"+
+                "Precio por dia: "+ precio+ "\n"+
+                "Edad requerida:"+ edad + "\n"+
+                "Disponible: "+ disponible + "\n"+
+                "--------------------------------";        
     }
     
     
