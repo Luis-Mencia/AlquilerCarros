@@ -16,7 +16,7 @@ public class Cliente {
     private Carro VehiculoAlquilado;
     private double dinero;
 
-    public Cliente(String nombre, String apellido, String celula, int edad, Carro VehiculoAlquilado, double dinero) {
+    public Cliente(String nombre, String apellido, String celula, int edad, double dinero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.celula = celula;

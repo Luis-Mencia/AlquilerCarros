@@ -17,7 +17,7 @@ public class Carro {
     private boolean disponible;
     private int edad;
 
-    public Carro(String placa, String marca, String modelo, double precio, boolean disponible) {
+    public Carro(String placa, String marca, String modelo, double precio, boolean disponible, int edad) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
