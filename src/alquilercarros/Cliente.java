@@ -33,6 +33,7 @@ public class Cliente {
         }
         if (edad < Carro.getEdad()) {
             System.out.println("No se puede alquilar este vehiculo, Edad minima requeriada: " + Carro.getEdad());
+            return;
             
         }
         if (dinero < Carro.getPrecio()) {

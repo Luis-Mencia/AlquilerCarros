@@ -75,13 +75,8 @@ public class Carro {
     }
 
     public void alquilar() {
-        if (disponible) {
             disponible = false;
-            System.out.println("El Vehiculo " + modelo + " ha sido alquilado correctamente");
-
-        } else {
-            System.out.println("El Vehiculo " + modelo + " no se encuentra disponible ");
-        }
+            
     }
     
     public void devolver(){
